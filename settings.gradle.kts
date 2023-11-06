@@ -42,10 +42,10 @@ dependencyResolutionManagement {
             library("curios", "top.theillusivec4.curios", "curios-forge").version("5.2.0+$minecraftVersion")
 
             // Applied Botanics
-            val appbotVersion = "1.4.2"
+            val appbotVersion = "1.5.0"
             version("appbot", appbotVersion)
-            library("appbot-fabric", "maven.modrinth", "applied-botanics").version("$appbotVersion-fabric")
-            library("appbot-forge", "maven.modrinth", "applied-botanics").version("$appbotVersion-forge")
+            library("appbot-fabric", "libs", "Applied-Botanics-fabric").version(appbotVersion)
+            library("appbot-forge", "libs", "Applied-Botanics-forge").version(appbotVersion)
 
             val botaniaVersion = "441"
             val botaniaSnapshot = true

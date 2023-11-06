@@ -90,6 +90,9 @@ subprojects {
                 includeGroup("maven.modrinth")
             }
         }
+        flatDir {
+            dirs("$rootDir/libs")
+        }
     }
 
     dependencies {

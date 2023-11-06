@@ -1,5 +1,7 @@
 package gripe._90.megacells.core;
 
+import java.util.List;
+
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -21,6 +23,8 @@ public interface Platform {
     void initLavaTransform();
 
     void addVillagerTrade(ItemLike item, int cost, int quantity, int xp);
+
+    List<ItemLike> getAppBotPortableCells();
 
     interface Client {
         BakedModel createWrappedCellModel(Item cell, BlockOrientation orientation);

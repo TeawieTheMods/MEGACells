@@ -185,7 +185,9 @@ public class CommonModelProvider implements DataProvider {
             flatItem(AppBotItems.MEGA_MANA_CELL_HOUSING, output);
             AppBotItems.getCells().forEach(cell -> cellModel(cell, output));
 
-            // TODO: portables
+            AppBotItems.getPortables()
+                    .forEach(cell ->
+                            portableModel(cell, "mana", AppEng.makeId("item/portable_cell_item_housing"), output));
             driveCell("mega_mana_cell", output);
         }
 

@@ -161,7 +161,7 @@ public final class MEGACells {
         }
 
         if (PLATFORM.isAddonLoaded(Addons.APPBOT)) {
-            AppBotIntegration.initUpgrades();
+            AppBotIntegration.initUpgrades(PLATFORM);
         }
     }
 }

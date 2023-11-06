@@ -26,6 +26,8 @@ import appeng.client.render.model.DriveBakedModel;
 import appeng.core.definitions.AEBlocks;
 import appeng.init.InitVillager;
 
+import appbot.fabric.ABItems;
+
 import gripe._90.megacells.core.Addons;
 import gripe._90.megacells.core.Loaders;
 import gripe._90.megacells.core.Platform;
@@ -76,6 +78,16 @@ public final class FabricPlatform implements Platform {
                 InitVillager.PROFESSION,
                 5,
                 builder -> builder.add(new VillagerTrades.ItemsForEmeralds(item.asItem(), cost, quantity, xp)));
+    }
+
+    @Override
+    public List<ItemLike> getAppBotPortableCells() {
+        return List.of(
+                ABItems.PORTABLE_MANA_CELL_1K,
+                ABItems.PORTABLE_MANA_CELL_4K,
+                ABItems.PORTABLE_MANA_CELL_16K,
+                ABItems.PORTABLE_MANA_CELL_64K,
+                ABItems.PORTABLE_MANA_CELL_256K);
     }
 
     public static class Client implements Platform.Client {
